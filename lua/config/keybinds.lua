@@ -1,11 +1,13 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
 map("i", "jj", "<Esc>")
+map("v", "//", "<Esc>")
 map("n", "<C-s>", ":w<CR>")
 map("n", "<leader>l", "<cmd>Lazy<CR>")
--- map("n", "<leader>e", "<cmd>Ex<CR>")
+map("n", "o", "o<Esc>")
+map("n", "O", "O<Esc>")
 
--- LSP
+
 map("n", "K", vim.lsp.buf.hover, {})
 map("n", "gd", vim.lsp.buf.definition, {})
 map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
@@ -22,6 +24,8 @@ map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
 map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+
+
 
 map("n","<S-tab>", "<cmd>BufferLineCyclePrev<cr>", {})
 map("n","<tab>", "<cmd>BufferLineCycleNext<cr>", {})

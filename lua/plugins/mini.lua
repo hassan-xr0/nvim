@@ -2,7 +2,14 @@ return {
 	"nvim-mini/mini.nvim",
 	version = "*",
 	config = function()
-		local mini = require("mini")
-		-- mini.pairs.setup()
+---@diagnostic disable-next-line: unused-local
+		require("mini.pairs").setup({
+    modes = { insert = true, command = true, terminal = false },
+    skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+    skip_ts = { "string" },
+    skip_unbalanced = true,
+    markdown = true,
+		})
+
 	end,
 }
