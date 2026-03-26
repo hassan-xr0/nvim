@@ -8,7 +8,7 @@ return {
 		linters_by_ft = {
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
-			json = { "eslint_d" },
+			json = { "jsonlint" },
 			css = { "eslint_d" },
 			html = { "eslint_d" },
 			markdown = { "eslint_d" },

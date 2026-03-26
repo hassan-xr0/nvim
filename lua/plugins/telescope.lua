@@ -52,18 +52,23 @@ return {
 					cwd = "~/.config/waybar/",
 				})
 			end)
-			vim.keymap.set("n", "<leader>gp", function()
+			vim.keymap.set("n", "<leader>gc", function()
 				builtin.find_files({
-					cwd = vim.fn.stdpath("config") .. "/lua/plugins",
+					cwd = "~/.config/",
 				})
 			end)
-			vim.keymap.set("n", "<leader>/", function()
+			vim.keymap.set("n", "<leader>gn", function()
+				builtin.find_files({
+					cwd = vim.fn.stdpath("config") .. "/",
+				})
+			end)
+			vim.keymap.set("n", "<leader>f/", function()
 				builtin.find_files({
 					cwd = "~/",
 					hidden = true
 				})
 			end)
-			vim.keymap.set("n", "<leader><leader>", function()
+			vim.keymap.set("n", "<leader>ff", function()
 				require("telescope.builtin").find_files({
 					cwd = vim.fn.expand("%:p:h"),
 				})

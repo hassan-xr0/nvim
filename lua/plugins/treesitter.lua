@@ -18,6 +18,7 @@ return {
 			"luadoc",
 			"markdown",
 			"markdown_inline",
+			"latex",
 			"printf",
 			"python",
 			"query",
